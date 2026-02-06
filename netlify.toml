@@ -6,3 +6,13 @@
 
 [functions."supabase-keep-alive"]
   schedule = "*/30 * * * *"
+[build]
+command = "npm run build"
+publish = "dist"
+
+[functions]
+  [functions.supabase-keep-alive]
+  schedule = "*/30 * * * *"
+
+[build.environment]
+SECRETS_SCAN_OMIT_KEYS = "VITE_SUPABASE_PUBLISHABLE_KEY"
