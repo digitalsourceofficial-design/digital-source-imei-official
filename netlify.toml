@@ -3,7 +3,6 @@
   publish = "dist"
 
 [functions]
-  directory = "netlify/functions"
 
-[[functions."supabase-keep-alive"]]
+[functions."supabase-keep-alive"]
   schedule = "*/30 * * * *"
