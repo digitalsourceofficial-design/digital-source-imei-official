@@ -1,0 +1,2 @@
+[functions."supabase-keep-alive"]
+schedule = "*/30 * * * *"

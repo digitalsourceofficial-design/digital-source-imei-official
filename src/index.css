@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IMEI Unblock Service - Design System
+   Professional Blue Theme
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    /* Background & Foreground */
+    --background: 210 20% 98%;
+    --foreground: 213 50% 15%;
+
+    /* Card - slightly elevated */
+    --card: 0 0% 100%;
+    --card-foreground: 213 50% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 50% 15%;
+
+    /* Primary - Navy Blue (#1e3a5f) */
+    --primary: 213 53% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Blue tint */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 213 53% 24%;
+
+    /* Muted */
+    --muted: 210 30% 95%;
+    --muted-foreground: 213 20% 45%;
+
+    /* Accent - Bright Blue (#3b82f6) */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success - Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 0%;
+
+    /* Border, Input, Ring */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 213 53% 24%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 53% 30%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 53% 30%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 213 50% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 213 50% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 213 50% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 40% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 213 40% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 90% 45%;
+    --warning-foreground: 0 0% 0%;
+
+    --border: 213 40% 22%;
+    --input: 213 40% 22%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 213 50% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 40% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 213 40% 22%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Prevent layout shift */
+@layer base {
+  /* Ensure minimum heights for layout stability */
+  header {
+    min-height: 4rem; /* 64px - matches h-16 */
+  }
+   
+  footer {
+    min-height: 12rem; /* Approximate footer height */
+  }
+   
+  /* Prevent CLS from font loading */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+   
+  /* Stable skeleton placeholder */
+  .skeleton-stable {
+    min-height: 1rem;
+  }
+ }
+ 
+ /* Smooth transitions for data updates */
+ @layer utilities {
+   .transition-data {
+     transition: opacity 150ms ease-in-out;
+   }
+ }
