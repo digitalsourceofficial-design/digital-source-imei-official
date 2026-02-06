@@ -7,7 +7,7 @@ const supabase = createClient(
 
 export const handler = async () => {
   try {
-    await supabase.from("profiles").select("id").limit(1);
+    await supabase.from("orders").select("id").limit(1);
 
     return {
       statusCode: 200,
